@@ -14,8 +14,19 @@ function daysLeft() {
     var b = today.getTime();
     var c = 24*60*60*1000;
     var diffDays = Math.round((a - b)/c);
-
-    resultString = ("<p>You have " + diffDays + " days left!");
+    if (a !== null) {
+	    if (diffDays < 0) {
+	    	diffDays = diffDays *-1;
+	    	resultString = ("<p>The date you chose was " + diffDays + " days ago! Please choose a date in the future!");
+	    } else if (diffDays === 0) {
+	    	resultString = "Your deadline is tomorrow!";
+		} else {
+			resultString = ("<p>You have " + diffDays + " days left!");
+		}
+	}
+	else {
+    	alert("You need to choose a date!");
+    }
 }
 
 $("#datepicker").on("change", function(){
@@ -31,6 +42,12 @@ $("#datepicker").on("change", function(){
 // condition 1:  there is an input but someone has selected a date in the past
 // condition 2:  there is an input and the day is tomorrow
 // condition 3:  there is an input and the date is in the future
+
+//  Conditions 4, 5 an 6 can't be done because the only input at the moment is the selection the user makes 
+//		from the datepicker. I believe what was required was to define what would happen if the input
+//		box doesn't get any input but we haven't done anything to that so I'll assume that we are doing
+//		something to them in the next step.
+
 // condition 4:  there is NO input but someone has selected a date in the past
 // condition 5:  there is NO input and the day is tomorrow
 // condition 6:  there is NO input and the date is in the future.
