@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- 
 ---
 title: More jQuery with Datepicker
@@ -33,6 +34,10 @@ Please fork and clone this repo in your local dev environment. _(Note: Do not se
 Open `index.html` in your browser and follow the instructions in `script.js`. From the terminal, type `git checkout step-1`. Each version of the script file contains detailed instructions about how to proceed through the exercises.
 
 If you get stuck, ask for help, or move on to the next step. The focus is on understanding what is happening at each step, not on trying to understand everything at first glance.
+=======
+# jquery-datepicker-lab
+You are on the branch `step-1`. Follow the instructions in `script.js`. Replace the underlined comments (`// ----`) with real code. When you are ready, add and commit your work and then check out the next branch:  `git checkout step-2`
+>>>>>>> 7e94bebfc45b7b2e72fecfd55d07c7108ac41dd3
 
 
 ### Additional Resources:
