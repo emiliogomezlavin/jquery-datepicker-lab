@@ -12,7 +12,13 @@ function daysLeft() {
 	var a = $( "#datepicker" ).datepicker('getDate').getTime();
 	// solutions for 9, 10, 11 and 12 go here:
 
-	// var b = _____
+	var b = today.getTime();
+	var c = a - b;
+	console.log(c);
+	var d = 24*60*60*1000;
+	console.log(d);
+	var e = Math.round(c / d);
+	console.log(e);
 	// var c = _____
 	// var d = _____
 
